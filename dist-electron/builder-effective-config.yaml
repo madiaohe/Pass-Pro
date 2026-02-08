@@ -1,0 +1,30 @@
+directories:
+  output: dist-electron
+  buildResources: build
+appId: com.yourcompany.passpro
+productName: PassPro
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+      - node_modules/**/*
+mac:
+  category: public.app-category.utilities
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  category: Utility
+electronVersion: 28.3.3
